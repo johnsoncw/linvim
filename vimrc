@@ -6,14 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ervandew/supertab'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/syntastic'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+" Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 call vundle#end()
 
 filetype plugin indent on
@@ -27,6 +26,13 @@ set background=light
 colorscheme solarized
 set number
 set gfn=Droid\ Sans\ Mono\ 10
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-s-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:ycm_key_list_previous_completion=['<Up>']
 
 " /@ search clears search pattern
 let @/ = ""
