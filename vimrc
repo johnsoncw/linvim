@@ -149,4 +149,7 @@ let &t_EI="\<Esc>]50;CursorShape=0\x7"
 
 nmap <C-Down> ddp
 nmap <C-Up> ddkP
+nmap <C-j> 4j
+nmap <C-k> 4k
+
 
