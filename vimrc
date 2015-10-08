@@ -12,7 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 " Plugin 'garbas/vim-snipmate'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 call vundle#end()
 
 filetype plugin indent on
@@ -147,4 +147,6 @@ let &t_EI="\<Esc>]50;CursorShape=0\x7"
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 
+nmap <C-Down> ddp
+nmap <C-Up> ddkP
 
