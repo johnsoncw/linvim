@@ -152,4 +152,8 @@ nmap <C-Up> ddkP
 nmap <C-j> 2jzz
 nmap <C-k> 2kzz
 
+if &term =~ '256color'
+    "disable Backkground Color Erase for correct backgound in tmux
+    set t_ut=
+endif
 
