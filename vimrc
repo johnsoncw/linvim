@@ -130,8 +130,23 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 :set listchars=eol:$,tab:\|\ ,trail:+,extends:>,precedes:<
 
-let &t_SI="\<Esc>]50;CursorShape=1\x7"
-let &t_EI="\<Esc>]50;CursorShape=0\x7"
+if has("autocmd")
+    " xfce4 terminal
+    au InsertEnter * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_BLOCK/TERMINAL_CURSOR_SHAPE_IBEAM/' ~/.config/xfce4/terminal/terminalrc"
+    au InsertLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_IBEAM/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"
+    au VimLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_IBEAM/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"
+    " xterm:
+    " let &t_SI = "\<Esc>[6 q"
+    " let &t_SR = "\<Esc>[4 q"
+    " let &t_EI = "\<Esc>[2 q"
+    " 1 or 0 -> blinking block
+    " 2      -> solid block
+    " 3      -> blinking underscore
+    " 4      -> underscore
+    " Recent xterm (>= 282)
+    " 5      -> blinking vertical bar
+    " 6      -> solid vertical bar
+endif
 
 " let &t_ti.="\e[?7727h"
 " let &t_te.="\e[?7727l"
@@ -151,6 +166,8 @@ nmap <C-Down> ddp
 nmap <C-Up> ddkP
 nmap <C-j> 2jzz
 nmap <C-k> 2kzz
+
+nmap <F7> <Plug>ShowFunc
 
 if &term =~ '256color'
     "disable Backkground Color Erase for correct backgound in tmux
