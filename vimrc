@@ -169,6 +169,11 @@ nmap <C-k> 2kzz
 
 nmap <F7> <Plug>ShowFunc
 
+nmap gh <C-w>h
+nmap gj <C-w>j
+nmap gk <C-w>k
+nmap gl <C-w>l
+
 if &term =~ '256color'
     "disable Backkground Color Erase for correct backgound in tmux
     set t_ut=
