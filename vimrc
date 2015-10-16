@@ -20,7 +20,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 filetype plugin indent on
 
 inoremap kj <ESC>
-let mapleader = ","
 let g:solarized_termcolors=256
 syntax on
 set encoding=utf-8
@@ -169,13 +168,6 @@ nmap <C-Up> ddkP
 nmap <C-j> 2jzz
 nmap <C-k> 2kzz
 
-nmap <F7> <Plug>ShowFunc
-
-nmap gh <C-w>h
-nmap gj <C-w>j
-nmap gk <C-w>k
-nmap gl <C-w>l
-
 if &term =~ '256color'
     "disable Backkground Color Erase for correct backgound in tmux
     set t_ut=
@@ -204,4 +196,13 @@ nnoremap \ :Ag<SPACE>
 set wildignore+=*/tmp/*,*.so,*.su,*.swp,*.zip
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let mapleader = ","
+
+map <leader>r :NERDTreeFind<cr>
+nmap <leader>f <Plug>ShowFunc
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
+nmap <leader>q :quit<CR>
 
