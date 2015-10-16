@@ -13,6 +13,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'SirVer/ultisnips'
+Plugin 'rking/ag.vim'
 call vundle#end()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
