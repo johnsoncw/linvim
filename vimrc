@@ -17,6 +17,7 @@ Plugin 'rking/ag.vim'
 call vundle#end()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/bbye
 
 filetype plugin indent on
 
@@ -205,7 +206,7 @@ nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
-nmap <leader>q :quit<CR>
+nmap <leader>q :Bdelete<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
