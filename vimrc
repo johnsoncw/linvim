@@ -209,3 +209,7 @@ nmap <leader>q :quit<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+nmap tn :tabnext<CR>
+nmap tp :tabprev<CR>
+nmap tt :tabfirst<CR>
+
