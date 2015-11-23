@@ -18,6 +18,7 @@ call vundle#end()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/bbye
+set runtimepath^=~/.vim/bundle/vim-dispatch
 
 filetype plugin indent on
 
@@ -207,6 +208,7 @@ nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 nmap <leader>q :Bdelete<CR>
+nmap <leader>m :Make -ws<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
