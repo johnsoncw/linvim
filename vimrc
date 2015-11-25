@@ -52,6 +52,7 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
+set incsearch
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -208,7 +209,9 @@ nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 nmap <leader>q :Bdelete<CR>
-nmap <leader>m :Make -ws<CR>
+nmap <leader>m :Make -ws 
+nmap <leader>M :Make! -ws 
+nmap <leader>e :Copen<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
