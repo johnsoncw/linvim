@@ -133,7 +133,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-:set listchars=eol:$,tab:\|\ ,trail:+,extends:>,precedes:<
+:set listchars=eol:$,tab:>>,trail:+,extends:>,precedes:<
 
 if has("autocmd")
     " xfce4 terminal
@@ -209,9 +209,12 @@ nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 nmap <leader>q :Bdelete<CR>
+nmap <leader>Q :q<CR>
 nmap <leader>m :Make -ws 
 nmap <leader>M :Make! -ws 
 nmap <leader>e :Copen<CR>
+nmap <leader>w :set list<CR>
+nmap <leader>n :set nolist<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
