@@ -218,10 +218,12 @@ nmap <leader>w :set list<CR>
 nmap <leader>n :set nolist<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 nmap tn :tabnext<CR>
 nmap tp :tabprev<CR>
 nmap tt :tabfirst<CR>
 nmap cn :cnext<CR>
 nmap cp :cprevious<CR>
+
 
