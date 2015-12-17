@@ -22,7 +22,7 @@ set runtimepath^=~/.vim/bundle/vim-dispatch
 
 filetype plugin indent on
 
-inoremap kj <ESC>
+" inoremap kj <ESC>
 let g:solarized_termcolors=256
 syntax on
 set encoding=utf-8
@@ -208,6 +208,7 @@ nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
+nmap <leader>o :on<CR>
 nmap <leader>q :Bdelete<CR>
 nmap <leader>Q :q<CR>
 nmap <leader>m :Make -ws 
@@ -221,4 +222,6 @@ nnoremap <S-Tab> :bprevious<CR>
 nmap tn :tabnext<CR>
 nmap tp :tabprev<CR>
 nmap tt :tabfirst<CR>
+nmap cn :cnext<CR>
+nmap cp :cprevious<CR>
 
