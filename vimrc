@@ -22,7 +22,7 @@ set runtimepath^=~/.vim/bundle/vim-dispatch
 
 filetype plugin indent on
 
-" inoremap kj <ESC>
+inoremap kj <ESC>
 let g:solarized_termcolors=256
 syntax on
 set encoding=utf-8
