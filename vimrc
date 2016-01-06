@@ -181,6 +181,7 @@ endif
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
+  set grepformat=%f:%l:%c%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -200,6 +201,12 @@ nnoremap \ :Ag<SPACE>
 set wildignore+=*/tmp/*,*.so,*.su,*.swp,*.zip
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+nmap <kPlus> <C-w>+
+nmap <kMinus> <C-w>-
+nmap <kDivide> <C-w><
+nmap <kMultiply> <C-w>>
+
 let mapleader = ","
 
 map <leader>r :NERDTreeFind<cr>
