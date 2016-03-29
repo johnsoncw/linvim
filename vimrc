@@ -233,4 +233,16 @@ nmap tt :tabfirst<CR>
 nmap cn :cnext<CR>
 nmap cp :cprevious<CR>
 
+set makeprg=dabchroot\ make
+
+hi User1 ctermfg=red ctermbg=grey
+
+" status line
+set laststatus=2
+set statusline=
+set statusline+=\ %n\     " buffer num
+set statusline+=%1*%m%*   " modified
+set statusline+=\ %<%F\   " path
+set statusline+=%y        " file type
+set statusline+=%=(%l,%v)\ %p%%[%L]   " row/col tot-percent
 
