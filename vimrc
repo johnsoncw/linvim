@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 " Plugin 'scrooloose/syntastic'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -124,14 +125,10 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 nmap <SPACE> <SPACE>:noh<CR>
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeTabsToggle<CR>
 
 " allow vim to close if just NERDTree is active
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" open NERDTree automatically if opening vim with no file(s) specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 :set listchars=eol:$,tab:>>,trail:+,extends:>,precedes:<
 
@@ -209,18 +206,19 @@ nmap <kMultiply> <C-w>>
 
 let mapleader = ","
 
-map <leader>r :NERDTreeFind<cr>
+map <leader>r :NERDTreeTabsFind<cr>
 nmap <leader>f <Plug>ShowFunc
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
-nmap <leader>o :on<CR>
+nmap <leader>H :sp<CR>
+nmap <leader>V :vs<CR>
+nmap <leader>d :q<CR>
+nmap <leader>c :tabe<CR>
 nmap <leader>q :Bdelete<CR>
-nmap <leader>Q :q<CR>
 nmap <leader>m :Make -ws 
 nmap <leader>M :Make! -ws 
-nmap <leader>e :Copen<CR>
 nmap <leader>w :set list<CR>
 nmap <leader>n :set nolist<CR>
 nnoremap <Tab> :bnext<CR>
